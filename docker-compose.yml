@@ -1,0 +1,65 @@
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgresql
+    build: ./postgresql
+    env_file:
+      - .env
+    networks:
+      Net_trascendence:
+        ipv4_address: 172.18.0.10
+    volumes:
+      - postgresql_vol:/var/lib/postgresql
+    restart: unless-stopped
+
+  django:
+    container_name: django
+    image: django
+    build: ./django
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
+    networks:
+      Net_trascendence:
+        ipv4_address: 172.18.0.11
+    volumes:
+      - django_vol:/media
+      - django_volIMG:/app/media
+      - nginx_vol:/etc/ssl
+    restart: unless-stopped
+
+  nginx:
+    container_name: nginx
+    image: nginx
+    build: ./nginx
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    networks:
+      Net_trascendence:
+        ipv4_address: 172.18.0.12
+    volumes:
+      - nginx_vol:/etc/ssl
+      - django_volIMG:/app/media
+    restart: unless-stopped
+
+volumes:
+  postgresql_vol:
+    name: postgresql
+  django_vol:
+    name: django
+  django_volIMG:
+    name: django_IMGs
+  nginx_vol:
+    name: nginx
+
+networks:
+  Net_trascendence:
+    name: Net_trascendence
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16

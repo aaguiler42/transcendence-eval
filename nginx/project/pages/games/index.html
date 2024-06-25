@@ -1,0 +1,167 @@
+<div class="d-flex justify-content-center textLight fs-6 font-alba">
+  <h1 class="title" data-i18n="games.game_data">GAME DATA BETWEEN</h1>
+</div>
+<div class="row">
+  <div
+    class="col-md-3 d-flex flex-column align-items-center justify-content-center"
+  >
+    <div class="card bg-transparent border-0" style="width: 18rem">
+      <img
+        id="player1Image"
+        class="card-img-top rounded-circle border border-dark border-2"
+        alt="Player 1 image"
+        data-i18n-alt="alt.avatarP1"
+        role="img"
+      />
+      <div class="card-body text-center">
+        <h2 id="player1" class="card-title textLight font-alba">Player 1</h2>
+        <h3 id="p1_is_winner" class="card-title textLight">Is Winner?</h3>
+      </div>
+    </div>
+    <div
+      class="mt-4 card border-4 borderLight bg-dark mb-3 w-100 d-flex justify-content-end"
+      aria-labelledby="player1_points_label"
+      role="complementary"
+    >
+      <h3 id="player1_points_label" class="visually-hidden textLight">
+        Player 1 Points
+      </h3>
+      <ul
+        id="player1_points"
+        class="list-group bg-dark textLight list-group-flush text-end list-unstyled"
+        role="list"
+        aria-labelledby="player1_points_label"
+      ></ul>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div
+      class="d-flex justify-content-center align-items-center font-alba fs-1 textLight"
+    >
+      <img
+        class="img-fluid"
+        data-i18n-alt="alt.versus"
+        alt="Versus logo"
+        src="img/BocetoV2.png"
+      />
+    </div>
+  </div>
+  <div
+    class="col-md-3 d-flex flex-column align-items-center justify-content-center"
+  >
+    <div class="card bg-transparent border-0" style="width: 18rem">
+      <img
+        id="player2Image"
+        class="card-img-top rounded-circle border border-dark border-2"
+        alt="Player 2 image"
+        data-i18n-alt="alt.avatarP2"
+        role="img"
+      />
+      <div class="card-body text-center">
+        <h2 id="player2" class="card-title textLight font-alba">Player 2</h2>
+        <h3 id="p2_is_winner" class="card-title textLight">Is Winner?</h3>
+      </div>
+    </div>
+    <div
+      class="mt-4 card border-4 borderLight bg-dark mb-3 w-100 d-flex justify-content-end"
+      aria-labelledby="player2_points_label"
+      role="complementary"
+    >
+      <h3 id="player2_points_label" class="visually-hidden textLight">
+        Player 2 Points
+      </h3>
+
+      <ul
+        id="player2_points"
+        class="list-group bg-dark textLight list-group-flush text-start list-unstyled"
+        role="list"
+        aria-labelledby="player2_points_label"
+      ></ul>
+    </div>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-md-9 mt-4 card d-flex border-4 bg-dark borderLight">
+    <div class="table-responsive">
+      <table
+        class="table textLight table-hover"
+        aria-labelledby="gameStatsTableCaption"
+      >
+        <caption id="gameStatsTableCaption" data-i18n="games.caption_stats">
+          Game Stats
+        </caption>
+        <thead class="textLight">
+          <tr class="textLight">
+            <th class="bg-dark textLight text-center" scope="col">
+              Stats Data P1
+            </th>
+            <th
+              data-i18n="games.caption_stats"
+              class="bg-dark textLight text-center"
+              scope="col"
+            >
+              Stats Items
+            </th>
+            <th class="bg-dark textLight text-center" scope="col">
+              Stats Data P2
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="p1Points" class="bg-dark textLight text-center">XX</td>
+            <td
+              headers="statsItems"
+              data-i18n="games.points"
+              class="bg-dark textLight text-center"
+            >
+              Points
+            </td>
+            <td id="p2Points" class="bg-dark textLight text-center">XX</td>
+          </tr>
+          <tr>
+            <td id="p1SegPerPoint" class="bg-dark textLight text-center">XX</td>
+            <td
+              headers="statsItems"
+              data-i18n="games.secondspoint"
+              class="bg-dark textLight text-center"
+            >
+              seconds / point
+            </td>
+            <td id="p2SegPerPoint" class="bg-dark textLight text-center">XX</td>
+          </tr>
+          <tr>
+            <td id="p1FirstHalfPoints" class="bg-dark textLight text-center">
+              XX
+            </td>
+            <td
+              headers="statsItems"
+              data-i18n="games.firstHalfPoints"
+              class="bg-dark textLight text-center"
+            >
+              % First Half Points %
+            </td>
+            <td id="p2FirstHalfPoints" class="bg-dark textLight text-center">
+              XX
+            </td>
+          </tr>
+          <tr>
+            <td id="p1SecondHalfPoints" class="bg-dark textLight text-center">
+              XX
+            </td>
+            <td
+              headers="statsItems"
+              data-i18n="games.secondHalfPoints"
+              class="bg-dark textLight text-center"
+            >
+              % Second Half Points %
+            </td>
+            <td id="p2SecondHalfPoints" class="bg-dark textLight text-center">
+              XX
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div
+  id="alert_credentials"
+  class="alert alert-danger alert-success d-none"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.credentials">
+    Error, Invalid Credentials!, check that your Username or Password are
+    correct ...
+  </p>
+  <hr />
+</div>
+
+<div class="container mt-4">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-xs-3 text-center">
+      <img
+        src="../../img/new_pong_white.png"
+        data-i18n-alt="alt.logo"
+        alt="Pong logo"
+        class="mw-300px img-fluid mb-3"
+      />
+      <h1
+        class="fst-italic textLight px-4 py-3 font-alba fs-1"
+        data-i18n="login.title"
+      >
+        Welcome to Fabulous 42 Pong
+      </h1>
+    </div>
+  </div>
+  <form id="loginForm" class="px-4 py-3">
+    <div class="form-group row">
+      <div class="col-xs-3">
+        <label class="textLight fs-4" for="username" data-i18n="me.username"
+          >Username</label
+        >
+        <input
+          id="username"
+          type="text"
+          class="form-control"
+          id="username"
+          data-i18n-placeholder="me.placeholder_username"
+          aria-required="true"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-3">
+        <label class="textLight fs-4" for="password" data-i18n="me.password"
+          >Password</label
+        >
+        <input
+          id="password"
+          type="password"
+          class="form-control"
+          id="password"
+          data-i18n-placeholder="me.placeholder_password"
+          aria-required="true"
+          required
+        />
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-dark textLight mt-3"
+      data-i18n="me.signIn"
+      aria-label="Sign In Button"
+    >
+      Sign in
+    </button>
+  </form>
+  <div class="dropdown-divider"></div>
+  <p class="textLight">
+    <span data-i18n="me.42msgInit"> Are you a student of 42?</span>
+    <a
+      class="textLight"
+      href="https://api.intra.42.fr/oauth/authorize?client_id=u-s4t2ud-705011416c8503f61b842815c96cf8b5ee5c84ba732aeb54a22ff6be95dbe8a5&redirect_uri=https%3A%2F%2Flocalhost%3A3000&response_type=code"
+      data-i18n="me.42link"
+    >
+      here </a
+    ><span data-i18n="me.42msgEnd">with your username or...UP TO YOU!</span>
+  </p>
+  <p class="textLight">
+    <span data-i18n="me.regMsg">You don't have an account?,</span>
+    <a class="textLight" href="/register" data-link data-i18n="me.regLink"
+      >Register here</a
+    >
+  </p>
+</div>

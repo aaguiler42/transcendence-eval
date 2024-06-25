@@ -1,0 +1,361 @@
+<div
+  id="alertUser"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.usernameExist">
+    Error in data, username already exists...
+  </p>
+  <hr />
+</div>
+<div
+  id="alertEmail"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.emailExist">Error in data, email already exists...</p>
+  <hr />
+</div>
+<div class="d-flex justify-content-center textLight fs-6 font-alba">
+  <h1 class="title" data-i18n="me.title">USER DATA</h1>
+</div>
+<div
+  class="col-md-3 d-flex flex-column align-items-center justify-content-center"
+>
+  <a
+    id="elemA"
+    class="btn btn-dark rounded-3 border-4 textLight w-100"
+    style="max-width: 350px"
+    href="#/friends"
+    data-link
+    data-i18n="me.friendship"
+    aria-label="Acces to Friends List page"
+    >Friendship
+  </a>
+  <div class="position-relative">
+    <span
+      id="badge"
+      class="position-absolute bottom-50 end-0 translate-middle-x badge rounded-pill bg-danger"
+      aria-label="Unread friendship notifications"
+    >
+    </span>
+  </div>
+  <div
+    class="mt-4 card border-4 borderLight bg-dark mb-3 w-100"
+    style="max-width: 350px"
+  >
+    <div class="d-flex justify-content-center">
+      <h2 class="textLight" data-i18n="home.statistics">Statistics</h2>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-borderless textLight">
+        <thead class="textLight">
+          <tr class="textLight">
+            <th class="bg-dark textLight" data-i18n="me.games" scope="col">
+              Games
+            </th>
+            <th class="bg-dark textLight" scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bg-dark textLight" data-i18n="me.playedGames">Played</td>
+            <td class="bg-dark textLight" id="playedGames"></td>
+          </tr>
+          <tr>
+            <td class="bg-dark textLight" data-i18n="me.winGames">Win</td>
+            <td class="bg-dark textLight" id="winGames"></td>
+          </tr>
+          <tr>
+            <td class="bg-dark textLight" data-i18n="me.lostGames">Lose</td>
+            <td class="bg-dark textLight" id="loseGames"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr class="d-sm-none" />
+</div>
+<div class="col-md-6">
+  <div class="d-flex justify-content-center align-items-center">
+    <img
+      id="playerImage"
+      class="card-img-top img-fluid rounded-circle mw-300px border border-dark border-2 h-300px"
+      alt="User avatar"
+      data-i18n-alt="alt.avatar"
+    />
+  </div>
+  <div class="mt-4">
+    <div class="row justify-content-center align-items-center textLight">
+      <div class="m-auto mw-50" style="max-width: 300px">
+        <div class="d-flex justify-content-between">
+          <div class="text-start mb-0" data-i18n="me.username">Username:</div>
+          <div class="text-end flex-grow-1 mb-0" id="username"></div>
+        </div>
+        <div class="d-flex">
+          <div class="text-start mb-0" data-i18n="me.name">Name:</div>
+          <div class="text-end flex-grow-1 mb-0" id="name"></div>
+        </div>
+        <div class="d-flex">
+          <div class="text-start mb-0" data-i18n="me.lastname">Lastname:</div>
+          <div class="text-end flex-grow-1 mb-0" id="lastname"></div>
+        </div>
+        <div class="d-flex">
+          <div class="text-start mb-0" data-i18n="me.email">Email:</div>
+          <div class="text-end flex-grow-1 mb-0" id="email"></div>
+        </div>
+        <div class="d-flex">
+          <div class="text-start mb-0" data-i18n="me.birthdate">Birthdate:</div>
+          <div class="text-end flex-grow-1 mb-0" id="birthdate"></div>
+        </div>
+        <div class="d-flex">
+          <div class="text-start mb-0" data-i18n="me.level">Level:</div>
+          <div class="text-end flex-grow-1 mb-0" id="level"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 d-flex">
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button
+        id="edit_button"
+        type="button"
+        class="btn btn-dark textLight"
+        data-bs-toggle="collapse"
+        data-bs-target="#edit_data"
+        data-i18n="me.edit_data"
+        aria-expanded="false"
+      >
+        Edit data
+      </button>
+      <form id="mod_dataForm">
+        <div id="edit_data" class="collapse">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingUsername"
+              placeholder="username"
+              aria-labelledby="floatingUsernameLabel"
+            />
+            <label
+              id="floatingUsernameLabel"
+              for="floatingUsername"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.username"
+              >Username</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingFirstName"
+              placeholder="firstname"
+              aria-labelledby="floatingFirstNameLabel"
+            />
+            <label
+              id="floatingFirstNameLabel"
+              for="floatingFirstName"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.name"
+              >Name</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingLastName"
+              placeholder="lastname"
+              aria-labelledby="floatingLastNameLabel"
+            />
+            <label
+              id="floatingLastNameLabel"
+              for="floatingLastName"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.lastname"
+              >Last Name</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+              aria-labelledby="floatingEmailLabel"
+            />
+            <label
+              id="floatingEmailLabel"
+              for="floatingInput"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.email"
+              >Email address</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingBirthdate"
+              placeholder="YYYY-MM-DD"
+              aria-labelledby="floatingBirthdateLabel"
+            />
+            <label
+              id="floatingBirthdateLabel"
+              for="floatingBirthdate"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.birthdate"
+              >Birthdate</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <select
+              id="languageSelector"
+              data-i18n-switcher
+              class="form-control locale-switcher"
+              aria-labelledby="languageSelectorLabel"
+            >
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+            </select>
+            <label
+              id="languageSelectorLabel"
+              for="languageSelector"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.language"
+              >Language</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              accept="image/*"
+              type="file"
+              class="form-control"
+              id="avatar"
+              placeholder="Select avatar"
+              aria-labelledby="avatarLabel"
+            />
+            <label
+              id="avatarLabel"
+              for="avatar"
+              class="form-label text-dark fw-bold"
+              data-i18n="me.select_avatar"
+              >Select Avatar</label
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <button
+              id="submitbutton"
+              type="button"
+              class="btn btn-dark textLight"
+              data-i18n="me.submit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <button
+        id="showTwoFactorAuth"
+        type="button"
+        class="btn btn-dark textLight d-none"
+        data-bs-toggle="collapse"
+        data-bs-target="#twoFactorAuth"
+        aria-expanded="false"
+        data-i18n="me.show_2FA"
+      >
+        Show two factor auth
+      </button>
+      <div id="twoFactorAuth">
+        <img
+          id="qrCode"
+          class="d-none"
+          src=""
+          data-i18n-alt="alt.qr"
+          alt="QR code for two-factor authentication"
+          style="height: 250px; width: 250px"
+        />
+        <p id="2faQrText" class="msg d-none textLight">
+          <span data-i18n="me.2FAMsg">Remember to scan your 2FA QR with, </span>
+          <a
+            class="link-underline-light textLight"
+            href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=es&gl=US"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Google Authenticator</a
+          >
+        </p>
+      </div>
+      <button
+        id="deleteTwoFactorAuth"
+        type="button"
+        class="btn btn-dark textLight d-none"
+        data-i18n="me.del_2FA"
+      >
+        Delete two factor auth
+      </button>
+      <button
+        id="enableTwoFactorAuth"
+        type="button"
+        class="btn btn-dark textLight d-none"
+        data-i18n="me.act_2FA"
+      >
+        Activate two factor auth
+      </button>
+    </div>
+  </div>
+  <div class="row justify-content-center mb-4">
+    <div
+      id="10last_games"
+      class="row border-4 bg-dark borderLight col-8 d-flex justify-content-center mt-5 w-100"
+    >
+      <table class="table textLight table-hover w-100">
+        <thead class="textLight">
+          <tr class="textLight">
+            <th
+              class="bg-dark textLight text-center"
+              scope="col"
+              data-i18n="me.result"
+            >
+              Result
+            </th>
+            <th
+              class="bg-dark textLight text-center"
+              scope="col"
+              data-i18n="me.score"
+            >
+              Score
+            </th>
+            <th
+              class="bg-dark textLight text-center"
+              scope="col"
+              data-i18n="me.gameId"
+            >
+              GameID
+            </th>
+            <th
+              class="bg-dark textLight text-center"
+              scope="col"
+              data-i18n="me.opponent"
+            >
+              opponent
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          id="lastsGames-table-body"
+          class="bg-dark textLight text-center"
+        ></tbody>
+      </table>
+    </div>
+  </div>
+</div>

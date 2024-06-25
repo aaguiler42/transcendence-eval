@@ -1,0 +1,63 @@
+<div
+  id="alert_credentials"
+  class="alert alert-danger alert-success d-none"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.2faCode">
+    Error, Invalid Two Factor Authentication code!
+  </p>
+  <hr />
+</div>
+
+<div class="container mt-4">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-xs-3 text-center">
+      <a href="#" data-link>
+        <img
+          src="../../img/new_pong_white.png"
+          data-i18n-alt="alt.logoHomeLink"
+          alt="Transcendence logo with link to home page"
+          class="mw-300px img-fluid mb-3"
+        />
+      </a>
+      <h1
+        class="fst-italic textLight px-4 py-3 font-alba fs-1"
+        data-i18n="2fa.title"
+      >
+        Insert 2FA to login
+      </h1>
+    </div>
+  </div>
+  <form id="loginForm" class="px-4 py-3">
+    <div class="form-group row">
+      <div class="col-xs-3">
+        <label
+          id="2faLabel"
+          for="2fa"
+          class="textLight fs-3"
+          data-i18n="2fa.cod"
+          >2faCode</label
+        >
+        <input
+          id="2fa"
+          type="text"
+          class="form-control"
+          data-i18n-placeholder="2fa.cod"
+          aria-labelledby="2faLabel"
+          aria-describedby="2faDesc"
+          aria-required="true"
+          required
+        />
+        <div id="2faDesc" class="form-text visually-hidden textLight">
+          Please enter Two Factor Code.
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-light mt-3" data-i18n="me.signIn">
+      Sign in
+    </button>
+  </form>
+</div>

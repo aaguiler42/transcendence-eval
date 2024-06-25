@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Game";
+  src: url("/fonts/Game.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Alba";
+  src: url("/fonts/Alba.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/7_Segment.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Arcade";
+  src: url("/fonts/Arcade.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Quicky";
+  src: url("/fonts/quickynickcond.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+.textLight {
+  color: #fff8dc !important;
+}
+
+.borderLight {
+  border: solid cornsilk;
+}
+
+.mw-300px {
+  max-width: 300px;
+}
+
+.h-300px {
+  max-height: 300px;
+}
+
+.mw-10rem {
+  max-width: 10rem;
+}
+
+.mw-30rem {
+  max-width: 30rem;
+}
+
+.font-game {
+  font-family: "Game", sans-serif;
+}
+
+.font-alba {
+  font-family: "Alba", sans-serif;
+}
+
+.font-segment {
+  font-family: "Segment", sans-serif;
+}
+
+.font-arcade {
+  font-family: "Arcade", sans-serif;
+}
+
+.font-quicky {
+  font-family: "Quicky", sans-serif;
+}
+
+.bg-color {
+  background-color: rgb(81, 82, 81);
+}
+
+#pong-game {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background-color: black;
+}
+
+#pong-board {
+  display: block;
+  background: #000;
+}
+
+.pong-header {
+  width: 800px;
+}
+
+.score {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+}
+
+#left-score {
+  left: 25%;
+}
+
+#right-score {
+  right: 25%;
+}
+
+.f0 {
+  font-size: 1rem;
+}
+.f1 {
+  font-size: 1.5rem;
+}
+.f2 {
+  font-size: 1.75rem;
+}
+.f3 {
+  font-size: 2rem;
+}
+.f4 {
+  font-size: 2.25rem;
+}

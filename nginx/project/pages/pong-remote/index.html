@@ -1,0 +1,168 @@
+<div
+  id="alert_aborted"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+  aria-live="assertive"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.gameAborted">Error, game aborted ...</p>
+  <a class="alert-heading" href="#/" data-link data-i18n="alert.backHome"
+    >Back to Home</a
+  >
+  <hr />
+</div>
+<div
+  id="alert_game_id"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+  aria-live="assertive"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.incorrect_game">Error, incorrect Game ID</p>
+  <a class="alert-heading" href="#/" data-link data-i18n="alert.backPlay"
+    >Back to Play</a
+  >
+  <hr />
+</div>
+<h1
+  class="fst-italic textLight px-4 py-3 font-alba fs-1"
+>
+  <span data-i18n="games.remoteTitle">
+    PONG REMOTE, CODE:
+  </span>
+  <span id="title"></span>
+</h1>
+<div class="mt-4 col-md-9">
+  <div id="pressStartAdvise">
+    <div class="textLight font-segment fs-1" aria-live="polite">
+      PONG IN REMOTE MODE LOADED
+    </div>
+    <div
+      id="waitingText"
+      class="textLight font-segment fs-1"
+      data-i18n="games.waitingOpponent"
+      aria-live="polite"
+    >
+      WAITING OPPONENT...
+    </div>
+    <div
+      id="PlayerOnLineText"
+      class="d-none textLight font-segment fs-1"
+      data-i18n="games.opponentConnected"
+      aria-live="polite"
+    >
+      OPPONENT CONNECTED TO GAME...
+    </div>
+    <div id="spinner" class="spinner-border textLight" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div
+      id="startText"
+      class="d-none textLight font-segment fs-1"
+      data-i18n="games.pressStart"
+      aria-live="assertive"
+    >
+      PRESS START BUTTON
+    </div>
+  </div>
+  <button id="start" class="d-none">
+    <img
+      src="./img/startpixel.png"
+      alt="Start Game Button"
+      alt-data-i18n="alt.startGameButton"
+      style="width: 500px; height: 500px"
+    />
+  </button>
+  <div
+    id="gameBoxDiv"
+    class="d-flex d-none pong-header"
+    role="application"
+    aria-label="Pong game area"
+  >
+    <div class="card rounded-3 border-black">
+      <div
+        class="card-header d-flex justify-content-between bg-dark align-items-center p-3"
+        style="border-top: 4px solid #ff7300"
+      >
+        <h2 id="playerA" class="mb-0 textLight text-centre font-arcade fs-1">
+          Player A
+        </h2>
+        <h2
+          class="mb-0 textLight text-centre font-arcade fs-1"
+          data-i18n="games.timeLeft"
+        >
+          Time Left
+        </h2>
+        <h2 id="playerB" class="mb-0 textLight text-centre font-arcade fs-1">
+          Player B
+        </h2>
+      </div>
+      <div
+        class="card-body bg-dark d-flex justify-content-between"
+        style="width: 800px"
+      >
+        <h3 id="left-score" class="font-segment fs-1 textLight ms-2">0</h3>
+        <h3
+          id="time-left"
+          class="font-segment fs-1 textLight"
+          aria-live="polite"
+        >
+          0.00
+        </h3>
+        <h3 id="right-score" class="font-segment fs-1 textLight me-2">0</h3>
+      </div>
+    </div>
+  </div>
+  <div id="pong-game" class="d-none"></div>
+  <div id="scores" class="align-items-center"></div>
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+    role="dialog"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h4
+            class="modal-title text-centre font-segment"
+            id="staticBackdropLabel"
+            data-i18n="games.endGame"
+          >
+            Game Finished!
+          </h4>
+        </div>
+        <div class="modal-body bg-dark textLight font-segment">
+          <div id="playerAModalData" class="fs-3"></div>
+          <div id="playerBModalData" class="fs-3"></div>
+          <div id="winnerModalData" class="fw-bold fs-2"></div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <a
+            id="gameDataLink"
+            class="nav-link active"
+            data-link
+          >
+            <button
+              id="buttonToGames"
+              type="button"
+              class="btn btn-warning"
+              data-bs-dismiss="modal"
+              data-i18n="games.gameDataButton"
+            >
+              Game Data
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,360 @@
+<div class="col-sm-3">
+  <h1
+    class="textLight fs-2 font-alba"
+    id="helloUser"
+    data-i18n="home.hello"
+  ></h1>
+  <div class="homeUserImage">
+    <img
+      id="playerImage"
+      class="card-img-top img-thumbnail rounded-circle h-auto mw-10rem"
+      data-i18n-alt="alt.avatar"
+      alt="User avatar"
+    />
+  </div>
+  <div
+    class="mt-4 card border-4 rounded-3 borderLight bg-dark mb-3"
+    style="max-width: 18rem"
+  >
+    <div class="card-body rounded-3">
+      <h2 class="textLight" data-i18n="home.statistics">Statistics</h2>
+      <p class="textLight" id="playedGames" data-i18n="home.playedGames"></p>
+      <p class="textLight" id="winGames" data-i18n="home.winGames"></p>
+      <p class="textLight" id="loseGames" data-i18n="home.loseGames"></p>
+    </div>
+  </div>
+  <hr class="d-sm-none" />
+</div>
+<div class="col-sm-6">
+  <div class="d-flex justify-content-center">
+    <h2 class="font-alba textLight">PONG</h2>
+  </div>
+  <div
+    id="carouselHomeInterval"
+    class="carousel slide m-auto mw-30rem h-auto justify-content-center align-items-center carousel-fade"
+    data-bs-ride="carousel"
+    aria-label="Game carousel"
+  >
+    <div class="carousel-inner shadow-1-strong rounded-3">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <button id="startLocalGame" aria-label="Start local game">
+          <img
+            src="img/LocalGame.png"
+            class="d-block w-100"
+            data-i18n-alt="alt.carouselGame"
+            alt="Game element on the carousel"
+          />
+        </button>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <button id="startLocalTournament" aria-label="Start local tournament">
+          <img
+            src="img/localTournament.png"
+            class="d-block w-100"
+            data-i18n-alt="alt.carouselLocalTournament"
+            alt="Local Tournament element on the carousel"
+          />
+        </button>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <button id="remoteGame" aria-label="Play remote game">
+          <img
+            src="img/remoteModeNObg.png"
+            class="d-block w-100"
+            data-i18n-alt="alt.carouselRemoteGame"
+            alt="Tournament element on the carousel"
+          />
+        </button>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <button id="newRemoteGame" aria-label="Create new remote game">
+          <img
+            src="img/NewremoteNObg.png"
+            class="d-block w-100"
+            data-i18n-alt="alt.carouselNewRemoteGame"
+            alt="Tournament element on the carousel"
+          />
+        </button>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <button id="tournament" aria-label="Play torunament game">
+          <img
+            src="img/Tournament.png"
+            class="d-block w-100"
+            data-i18n-alt="alt.carouselTournament"
+            alt="Tournament element on the carousel"
+          />
+        </button>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <button id="createTournament" aria-label="Start new tournament game">
+          <img
+            src="img/NewTournament.png"
+            class="d-block w-100"
+            data-i18n-alt="alt.carouselNewTournament"
+            alt="Tournament element on the carousel"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="carousel-indicators" style="margin-bottom: -40px">
+      <button
+        type="button"
+        data-bs-button-init
+        data-bs-target="#carouselHomeInterval"
+        data-bs-slide-to="0"
+        class="active mt-6 me-10"
+        aria-current="true"
+        aria-label="Slide 1"
+        style="width: 100px"
+      >
+        <img
+          class="d-block w-100 shadow-1-strong rounded"
+          src="img/LocalGame.png"
+          class="img-fluid"
+          data-i18n-alt="alt.carouselLocalGameThumbnail"
+          alt="Local Game"
+        />
+      </button>
+      <button
+        type="button"
+        data-bs-button-init
+        data-bs-target="#carouselHomeInterval"
+        data-bs-slide-to="1"
+        class="me-1"
+        aria-label="Slide 2"
+        style="width: 100px"
+      >
+        <img
+          class="d-block w-100 shadow-1-strong rounded"
+          src="img/localTournament.png"
+          class="img-fluid"
+          data-i18n-alt="alt.carouselLocalTournamentThumbnail"
+          alt="Local Tournament"
+        />
+      </button>
+      <button
+        type="button"
+        data-bs-button-init
+        data-bs-target="#carouselHomeInterval"
+        data-bs-slide-to="2"
+        class="me-1"
+        aria-label="Slide 3"
+        style="width: 100px"
+      >
+        <img
+          class="d-block w-100 shadow-1-strong rounded"
+          src="img/remoteModeNObg.png"
+          class="img-fluid"
+          data-i18n-alt="alt.carouselRemoteGameThumbnail"
+          alt="Remote Game"
+        />
+      </button>
+      <button
+        type="button"
+        data-bs-button-init
+        data-bs-target="#carouselHomeInterval"
+        data-bs-slide-to="3"
+        class="me-1"
+        aria-label="Slide 4"
+        style="width: 100px"
+      >
+        <img
+          class="d-block w-100 shadow-1-strong rounded"
+          src="img/NewremoteNObg.png"
+          class="img-fluid"
+          data-i18n-alt="alt.carouselNewRemoteGameThumbnail"
+          alt="New Remote Game"
+        />
+      </button>
+      <button
+        type="button"
+        data-bs-button-init
+        data-bs-target="#carouselHomeInterval"
+        data-bs-slide-to="4"
+        class="me-10"
+        aria-label="Slide 5"
+        style="width: 100px"
+      >
+        <img
+          class="d-block w-100 shadow-1-strong rounded"
+          src="img/Tournament.png"
+          class="img-fluid"
+          data-i18n-alt="alt.carouselTournamentThumbnail"
+          alt="Torunamente Game"
+        />
+      </button>
+      <button
+        type="button"
+        data-bs-button-init
+        data-bs-target="#carouselHomeInterval"
+        data-bs-slide-to="5"
+        class="me-10"
+        aria-label="Slide 6"
+        style="width: 100px"
+      >
+        <img
+          class="d-block w-100 shadow-1-strong rounded"
+          src="img/NewTournament.png"
+          class="img-fluid"
+          data-i18n-alt="alt.carouselNewTournamentThumbnail"
+          alt="New Tournament Game"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="remoteGameModal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="true"
+    tabindex="-1"
+    aria-labelledby="remoteGameModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h3
+            class="modal-title text-center font-segment"
+            id="remoteGameModalLabel"
+          >
+            Remote Game Mode!
+          </h3>
+        </div>
+        <div class="modal-body bg-dark textLight font-segment">
+          <div id="playerAModalData" class="fs-3" data-i18n="games.modalGameId">
+            Enter the game Id
+          </div>
+          <div id="remoteGameId" class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inputRemoteGameId"
+              placeholder="GameID"
+              aria-labelledby="remoteGameIdLabel"
+            />
+            <label
+              id="remoteGameIdLabel"
+              for="inputRemoteGameId"
+              class="form-label text-dark"
+              data-i18n="games.gameId"
+              >GameID</label
+            >
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button
+            id="sendIdButton"
+            type="button"
+            class="btn btn-warning"
+            data-bs-dismiss="modal"
+            aria-label="Go button"
+          >
+            GO!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="newTournamentModal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="true"
+    tabindex="-1"
+    aria-labelledby="newTournamentModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h3
+            class="modal-title text-center font-segment"
+            id="newTournamentModalLabel"
+          >
+            NEW TOURNAMENT!
+          </h3>
+        </div>
+        <div class="modal-body bg-dark textLight font-segment">
+          <div id="playerAModalData" class="fs-3">Select number of players</div>
+          <div id="remoteGameId" class="form-floating mb-3">
+            <div id="nbrPlayers" class="col-md-6">
+              <select
+                id="nbrPlayersSelector"
+                class="form-select float-end w-auto"
+                aria-label="Number of players Selector"
+              >
+                <option value="4">4 Players</option>
+                <option value="8">8 Players</option>
+                <option value="16">16 Players</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button
+            id="createTournamentButton"
+            type="button"
+            class="btn btn-warning"
+            data-bs-dismiss="modal"
+            aria-label="Create Tournament button"
+          >
+            Create!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="tournamentModal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="true"
+    tabindex="-1"
+    aria-labelledby="tournamentModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h3
+            class="modal-title text-center font-segment"
+            id="tournamentModalLabel"
+          >
+            TOURNAMENT!
+          </h3>
+        </div>
+        <div class="modal-body bg-dark textLight font-segment">
+          <div class="fs-3">Enter Tournament ID</div>
+          <div id="remoteTournamentId" class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inputTournamentId"
+              placeholder="GameID"
+              aria-labelledby="remoteTournamentIdLabel"
+            />
+            <label
+              id="remoteTournamentIdLabel"
+              for="inputTournamentId"
+              class="form-label text-dark"
+              data-i18n="games.gameId"
+              >Tournament ID</label
+            >
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button
+            id="tournamentButton"
+            type="button"
+            class="btn btn-warning"
+            data-bs-dismiss="modal"
+          >
+            Join!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

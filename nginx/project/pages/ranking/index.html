@@ -1,0 +1,120 @@
+<div>
+  <div id="userData"></div>
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="mt-4 col d-flex justify-content-center align-items-center font-alba textLight"
+        >
+          <h1 id="gamedata" class="fs-1" data-i18n="ranking.ranking">
+            RANKING
+          </h1>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mb-3">
+        <div class="col-auto">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control"
+            placeholder="..."
+            aria-label="Search Input"
+          />
+        </div>
+        <div class="col-auto">
+          <button
+            id="searchButton"
+            class="btn border-3 bg-dark borderLight textLight rounded-pill"
+            data-i18n="ranking.search"
+            aria-label="Search Button"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <div
+        id="top3players"
+        class="row border-4 bg-dark borderLight justify-content-center mb-3"
+      ></div>
+      <div class="row justify-content-center mb-4">
+        <div
+          id="player_friends"
+          class="row border-4 bg-dark borderLight col-8 d-flex justify-content-center"
+        >
+          <table class="table textLight table-hover w-100">
+            <thead class="textLight">
+              <tr class="textLight">
+                <th
+                  class="bg-dark textLight text-center"
+                  scope="col"
+                  data-i18n="ranking.position"
+                >
+                  Position
+                </th>
+                <th
+                  class="bg-dark textLight text-center"
+                  scope="col"
+                  data-i18n="ranking.avatar"
+                >
+                  Avatar
+                </th>
+                <th
+                  class="bg-dark textLight text-center"
+                  scope="col"
+                  data-i18n="ranking.level"
+                >
+                  Level
+                </th>
+                <th
+                  class="bg-dark textLight text-center"
+                  scope="col"
+                  data-i18n="ranking.user"
+                >
+                  User
+                </th>
+                <th
+                  class="bg-dark textLight text-center"
+                  scope="col"
+                  data-i18n="ranking.last_session"
+                >
+                  Last Session
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              id="ranking-table-body"
+              class="bg-dark textLight text-center"
+            ></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-auto">
+          <button
+            id="prevPage"
+            class="btn border-3 bg-dark borderLight textLight rounded-pill mt-2"
+            disabled
+            aria-label="Previous Page Button"
+            data-i18n="ranking.previous"
+          >
+            Previous
+          </button>
+          <div
+            id="buttons-container"
+            class="btn-group border-1 bg-dark borderLight textLight mt-2"
+            role="group"
+          ></div>
+          <button
+            id="nextPage"
+            class="btn border-3 bg-dark borderLight textLight rounded-pill mt-2"
+            disabled
+            aria-label="Next Page Button"
+            data-i18n="ranking.next"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,278 @@
+<div
+  id="alert_pswd"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.matchPswd">
+    Error in registration, check that your passwords match...
+  </p>
+  <hr />
+</div>
+<div
+  id="alertUser"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.usernameExist">
+    Error in registration, username already exists...
+  </p>
+  <hr />
+</div>
+<div
+  id="alertEmail"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.emailExist">
+    Error in registration, email already exists...
+  </p>
+  <hr />
+</div>
+<div
+  id="alertRequired"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.required">
+    Error in registration, please complete the fields marqued as "Required"
+  </p>
+  <hr />
+</div>
+<div
+  id="alertDateFormat"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.dateFormat">
+    Error in registration, please use correct format to birthdate YYYY-MM-DD"
+  </p>
+  <hr />
+</div>
+<div
+  id="alertDate"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.date">
+    Error in registration, with that date you have not yet been born!!
+  </p>
+  <hr />
+</div>
+<div
+  id="alertEmailFormat"
+  class="d-none alert alert-danger alert-success"
+  role="alert"
+>
+  <h4 class="alert-heading" data-i18n="alert.wrong">
+    Ups! Something went wrong
+  </h4>
+  <p data-i18n="alert.emailFormat">
+    Error in registration, wrong email format!!
+  </p>
+  <hr />
+</div>
+
+<div class="container">
+  <a class="col-6" href="#" data-link>
+    <img
+      id="logo"
+      src="/img/new_pong_white.png"
+      width="60"
+      data-i18n-alt="alt.logoHomeLink"
+      alt="Transcendence logo with link to home page"
+    />
+  </a>
+  <h2 class="textLight font-alba fs-2 mt-4" data-i18n="login.title">
+    Welcome to Fabulous Pong!
+  </h2>
+  <h1 class="textLight font-alba fs-1 mt-4" data-i18n="login.register">
+    Register here and enjoy!
+  </h1>
+  <form
+    id="registerForm"
+    class="row g-3 needs-validation mt-4 fs-4 textLight"
+    role="form"
+    novalidate
+  >
+    <div class="col-md-6">
+      <label for="first_name" class="form-label" data-i18n="me.name"
+        >First name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="first_name"
+        data-i18n-placeholder="placeholder.required"
+        aria-required="true"
+        aria-describedby="first_name_feedback"
+        required
+      />
+      <div id="first_name_feedback" class="invalid-feedback">
+        Please enter your first name.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="last_name" class="form-label" data-i18n="me.lastname"
+        >Last name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="last_name"
+        data-i18n-placeholder="placeholder.required"
+        aria-required="true"
+        aria-describedby="last_name_feedback"
+        required
+      />
+      <div id="last_name_feedback" class="invalid-feedback">
+        Please enter your last name.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="username" class="form-label" data-i18n="me.username"
+        >Username</label
+      >
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="usernamePrepend">@</span>
+        <input
+          type="text"
+          class="form-control text-lowercase"
+          id="username"
+          aria-describedby="usernamePrepend username_feedback"
+          data-i18n-placeholder="placeholder.required"
+          aria-required="true"
+          required
+        />
+        <div id="username_feedback" class="invalid-feedback">
+          Please enter your username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label" data-i18n="me.email">email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        data-i18n-placeholder="placeholder.required"
+        aria-describedby="email_feedback"
+        required
+      />
+      <div id="email_feedback" class="invalid-tooltip">
+        Please provide a valid email.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="password" class="form-label" data-i18n="me.password"
+        >Password</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        data-i18n-placeholder="placeholder.required"
+        aria-required="true"
+        aria-describedby="password_feedback"
+        required
+      />
+
+      <div id="password_feedback" class="invalid-tooltip">
+        Please provide a valid password.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="confirm_password" class="form-label" data-i18n="me.rePassword"
+        >Repeat Password</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="confirm_password"
+        data-i18n-placeholder="placeholder.required"
+        aria-required="true"
+        aria-describedby="repeat_password_feedback"
+        required
+      />
+
+      <div id="repeat_password_feedback" class="invalid-tooltip">
+        Please provide a valid password.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="birthdate" class="form-label" data-i18n="me.birthdate"
+        >Birthday</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="birthdate"
+        data-i18n-placeholder="placeholder.requiredBirthdate"
+        pattern="\d{4}-\d{2}-\d{2}"
+        aria-required="true"
+        aria-describedby="birthdate_feedback"
+        required
+      />
+      <div id="birthdate_feedback" class="invalid-tooltip">
+        Please provide a valid Birthday.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="langSelector" class="form-label" data-i18n="me.language"
+        >Language</label
+      >
+      <select
+        id="languageSelector"
+        data-i18n-switcher
+        class="form-control locale-switcher"
+        aria-label="Language Selector"
+      >
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="avatar" class="form-label" data-i18n="me.select_avatar"
+        >Select your Avatar</label
+      >
+      <input
+        accept="image/*"
+        type="file"
+        class="form-control"
+        id="avatar"
+        aria-describedby="avatar_feedback"
+      />
+      <div id="avatar_feedback" class="invalid-tooltip">
+        Please select an avatar.
+      </div>
+    </div>
+  </form>
+  <div class="col-md-6 mt-4 mx-auto text-center mb-4">
+    <button
+      id="submitbutton"
+      class="submit btn btn-dark textLight"
+      type="button"
+      data-i18n="me.submit"
+    >
+      Submit
+    </button>
+  </div>
+</div>
